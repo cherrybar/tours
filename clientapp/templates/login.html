@@ -1,0 +1,15 @@
+
+
+
+{% block title %}Вход{% endblock %}
+
+
+
+
+  <h2>Войдите</h2>
+  <form method="post" action="{% url 'log_in' %}">
+    {% csrf_token %}
+	<input name="username" placeholder="Имя" class="textbox" required />
+	<input name="password" placeholder="Пароль" class="textbox" required />
+    <button type="submit">Войти</button>
+  </form>
